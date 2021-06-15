@@ -172,7 +172,16 @@ namespace hotel__management_system_v1.user_control
         
                 if (System.Text.RegularExpressions.Regex.IsMatch(textBoxPnrf.Text, "  ^ [0-9]"))
                 {
+                try 
+                {
                     textBoxPnrf.Text = "";
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                    
                 }
         }
 
